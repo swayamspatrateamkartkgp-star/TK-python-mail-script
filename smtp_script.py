@@ -27,13 +27,13 @@ data = pd.read_csv('test_csv.csv',encoding = 'utf-8')
 
 # Definitions
 BROCHURE_URL = "https://online.fliphtml5.com/TeamKart/1-Qt2Y/"
-YOUR_NAME = "Divya Prasad"
+YOUR_NAME = "Swayam Swarup Patra"
 TK_LOGO_URL = "https://imgs.search.brave.com/sv9Okf6sV5Cmz8fLS-RwmJ4UnGHgVvUuETOSC-FziQQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91Z2Mu/cHJvZHVjdGlvbi5s/aW5rdHIuZWUvZTYw/NTFhMTAtMWFiZC00/NWRhLWI4N2QtMzkz/ZDc5MmM5NjE2X3Rl/YW1rYXJ0LWVsZWN0/cmljLWxvZ28td2hp/dGUtc3EucG5nP2lv/PXRydWUmc2l6ZT1h/dmF0YXItdjNfMA"
-YOUR_DEPARTMENT = "Department of Electrical Engineering"
+YOUR_DEPARTMENT = "Department of Mechanical Engineering"
 YOUR_YEAR = "First"
-YOUR_ROLE_TK = "Electronics Subsystem Trainee"
-YOUR_CONTACT = "+91 7262936506"
-YOUR_LINKED_IN = "www.linkedin.com/in/divya-prasad-34830237b"
+YOUR_ROLE_TK = "Mechanical(Drivetrain and Thermals) Subsystem Trainee"
+YOUR_CONTACT = "+91 9827790420"
+YOUR_LINKED_IN = "https://www.linkedin.com/in/swayam-swarup-patra-95b47539b/"
 YOUR_FACEBOOK = "https://www.facebook.com/TeamKART/"
 
 SUBJECT = "Greetings from Indian Institute of Technology Kharagpur."
