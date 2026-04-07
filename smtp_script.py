@@ -164,7 +164,7 @@ def send_emails():
             
             html_content = html_template.format(
                 recipient_name=row['Name'],
-                company=row['Company'], # Fixed: Uncommented this line
+                #company=row['Company'], # Fixed: Uncommented this line
                 brochure_link = BROCHURE_URL,
                 tk_logo_url = TK_LOGO_URL,
                 your_name = YOUR_NAME,
