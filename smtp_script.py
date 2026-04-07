@@ -86,19 +86,10 @@ HTML_HEAD = """
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Sir/Madam,</p>
+        <p>Dear {recipient_name},</p>
+        <p>My name is {your_name}, this is a trial mail.</p>
 
-        <p>My name is <strong>{your_name}</strong>, and I am a student at <strong>IIT Kharagpur</strong> and a member of our institute’s Formula Student team, <span class="highlight">TeamKART</span>. We are a long-standing student engineering initiative under the Department of Mechanical Engineering (active since 2008), focused on providing hands-on technical education through the complete design and manufacture of Formula-style race cars.</p>
-
-        <p>Over the years, the team has manufactured eight combustion vehicles and participated in eight competitions globally, earning recognition for excellence—including a Top 10 finish at Formula Bharat 2023 and 3rd place in the Cost & Manufacturing Event. Building on this foundation, TeamKART has recently manufactured its first electric vehicle project series (KE-1 and subsequent models) and is currently working on optimizing our powertrain and battery systems.</p>
-
-        <p>Our primary objective is practical skill development. Students gain real-world exposure to engineering design and project execution—skills that strongly align with CSR goals related to technical education and employability. All technical learnings are documented to ensure long-term impact for future student batches.</p>
-
-        <p>As we undertake this technically intensive project, we are seeking CSR support from organizations whose initiatives focus on education and sustainability. Support from <strong>{company}</strong> would directly contribute to strengthening hands-on engineering education in India.</p>
-
-        <p>We would be grateful for the opportunity to share additional details and explore the potential scope of a CSR collaboration at your convenience.</p>
 """
-
 HTML_TAIL="""
         <p><strong>Kindly refer to:</strong></p>
         <div class="links-section">
