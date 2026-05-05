@@ -15,7 +15,7 @@ PASSWORD = os.environ.get("EMAIL_PASSWORD")
 # Correct csv file name 
 data = pd.read_csv("test_csv.csv")
 
-# CC List updated with Mohamed
+# CC List updated with Mohamed and Samarth
 CC_EMAILS = [
     "samarthkalgaonkar.teamkartkgp@gmail.com",
     "mohamed.teamkartkgp@gmail.com"
@@ -32,8 +32,8 @@ YOUR_CONTACT = "+91 9827790420"
 YOUR_LINKED_IN = "https://www.linkedin.com/in/swayam-swarup-patra-95b47539b/"
 YOUR_FACEBOOK = "https://www.facebook.com/TeamKART/"
 
-# Subject Line
-SUBJECT = "Investing in Human Capital: Empowering Technical Education at IIT Kharagpur"
+# Subject Line as requested
+SUBJECT = "Greetings from Indian Institute of Technology Kharagpur."
 
 HTML_HEAD = """
 <!DOCTYPE html>
@@ -50,35 +50,35 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# Updated body for Ms. Shubha Sekhar
+# Updated body for Ms. Monica Gupta at HCL Technologies
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Ms. Sekhar,</p>
+        <p>Dear Ms. Gupta,</p>
         
-        <p>My name is <strong>{your_name}</strong>, and I represent <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you as the Senior Director of Human Rights at Coca-Cola to explore a potential CSR collaboration focused on the development of human capital and the promotion of technical education in India.</p>
+        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you at HCL Technologies Limited to explore a collaborative opportunity where technical innovation meets professional skill-building—a core value reflected in HCL's commitment to tech-driven transformation.</p>
 
-        <h3>Empowering Human Potential through Engineering</h3>
-        <p>At TeamKART, we believe that access to hands-on technical education is a cornerstone of social development. Operating under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, our initiative serves as a research cell that empowers students to master complex problem-solving and sustainable engineering:</p>
+        <h3>Empowering Innovation Through Research</h3>
+        <p>Operating under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, TeamKART is a specialized research cell where the next generation of engineers executes end-to-end product development. Our initiative aligns with HCL’s focus on technical education and research excellence:</p>
         <ul>
-            <li><strong>Developing Technical Human Capital:</strong> Students manage complete design cycles, utilizing industry-standard validation tools like ANSYS to bridge the gap between theory and high-level employability.</li>
-            <li><strong>Pioneering Sustainable Innovation:</strong> We have successfully manufactured our <strong>first electric vehicle (KE-1)</strong>, demonstrating our commitment to promoting clean, accessible green technology.</li>
-            <li><strong>Fostering Technical Equity:</strong> Our team ensures that students from diverse backgrounds gain real-world exposure to advanced battery management and powertrain optimization.</li>
+            <li><strong>Digital and Physical Engineering:</strong> Students utilize advanced CAD and ANSYS structural validation to bridge the gap between high-level theory and industrial application.</li>
+            <li><strong>Sustainability and Green Tech:</strong> We have pivoted to the electric vehicle sector, successfully manufacturing our <strong>first electric vehicle (KE-1)</strong> to advance the future of sustainable mobility.</li>
+            <li><strong>Skill Transformation:</strong> Our members master real-world project execution, developing specialized expertise in powertrain optimization and battery management.</li>
         </ul>
 
-        <h3>Institutional Legacy & Excellence</h3>
-        <p>The success of our members is a direct reflection of the academic rigors and values of <strong>IIT Kharagpur</strong>. Our notable achievements include:</p>
+        <h3>Legacy of Technical Excellence</h3>
+        <p>The academic rigor of <strong>IIT Kharagpur</strong> has fueled a decade-long legacy of performance. Our milestones include:</p>
         <ul>
             <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023.</li>
-            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, emphasizing our focus on efficient and responsible project management.</li>
-            <li>A decade-long legacy of manufacturing <strong>eight combustion vehicles</strong> before our strategic pivot toward high-performance electric vehicle research.</li>
+            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, showcasing our ability to balance technical complexity with commercial viability.</li>
+            <li>Manufacturing of <strong>eight combustion vehicles</strong> prior to our current focus on high-performance EV research.</li>
         </ul>
 
-        <p>Support from Coca-Cola would directly strengthen our mission to provide high-quality engineering education and promote sustainable research in India. We would be grateful to discuss how this collaboration aligns with your vision for community and educational empowerment.</p>
+        <p>A CSR partnership with HCL Technologies would directly support the advancement of technical education and engineering research in India. We would welcome the chance to discuss how our team’s objectives can align with HCL’s vision for technical empowerment.</p>
 """
 
 HTML_TAIL="""
-        <p><strong>For further details, please refer to:</strong></p>
+        <p><strong>For more information, please refer to:</strong></p>
         <div class="links-section">
             <a href="{brochure_link}">Our Sponsorship Brochure</a>
             <a href="http://www.teamkart.org/">Official Team Website</a>
