@@ -33,7 +33,7 @@ YOUR_LINKED_IN = "https://www.linkedin.com/in/swayam-swarup-patra-95b47539b/"
 YOUR_FACEBOOK = "https://www.facebook.com/TeamKART/"
 
 # Subject Line
-SUBJECT = "Proposal for CSR Collaboration: Supporting Technical Excellence at IIT Kharagpur"
+SUBJECT = "Investing in Human Capital: Empowering Technical Education at IIT Kharagpur"
 
 HTML_HEAD = """
 <!DOCTYPE html>
@@ -50,35 +50,35 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# Updated body for Mr. Ashish Jain
+# Updated body for Ms. Shubha Sekhar
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Mr. Jain,</p>
+        <p>Dear Ms. Sekhar,</p>
         
-        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you as a Senior Director at Coca-Cola to explore a potential CSR collaboration focused on advancing technical education and sustainable engineering research in India[cite: 3].</p>
+        <p>My name is <strong>{your_name}</strong>, and I represent <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you as the Senior Director of Human Rights at Coca-Cola to explore a potential CSR collaboration focused on the development of human capital and the promotion of technical education in India.</p>
 
-        <h3>Empowering Research and Education</h3>
-        <p>Operating under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong> since 2008, TeamKART serves as a specialized research hub[cite: 3]. Our initiative empowers students to:</p>
+        <h3>Empowering Human Potential through Engineering</h3>
+        <p>At TeamKART, we believe that access to hands-on technical education is a cornerstone of social development. Operating under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, our initiative serves as a research cell that empowers students to master complex problem-solving and sustainable engineering:</p>
         <ul>
-            <li><strong>Master Product Development:</strong> We manage full design cycles using industry-standard tools like SolidWorks and ANSYS for structural validation[cite: 3].</li>
-            <li><strong>Lead Green Innovation:</strong> We have successfully manufactured our <strong>first electric vehicle (KE-1)</strong>, demonstrating our commitment to zero-emission technology[cite: 3].</li>
-            <li><strong>Drive Technical Skill-Building:</strong> Members gain hands-on expertise in battery management, powertrain optimization, and advanced manufacturing[cite: 3].</li>
+            <li><strong>Developing Technical Human Capital:</strong> Students manage complete design cycles, utilizing industry-standard validation tools like ANSYS to bridge the gap between theory and high-level employability.</li>
+            <li><strong>Pioneering Sustainable Innovation:</strong> We have successfully manufactured our <strong>first electric vehicle (KE-1)</strong>, demonstrating our commitment to promoting clean, accessible green technology.</li>
+            <li><strong>Fostering Technical Equity:</strong> Our team ensures that students from diverse backgrounds gain real-world exposure to advanced battery management and powertrain optimization.</li>
         </ul>
 
-        <h3>Legacy of Excellence</h3>
-        <p>TeamKART’s performance is a testament to the academic rigors of <strong>IIT Kharagpur</strong>[cite: 3]. Recent achievements include:</p>
+        <h3>Institutional Legacy & Excellence</h3>
+        <p>The success of our members is a direct reflection of the academic rigors and values of <strong>IIT Kharagpur</strong>. Our notable achievements include:</p>
         <ul>
-            <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023[cite: 3].</li>
-            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event[cite: 3].</li>
-            <li>Successful manufacturing of <strong>eight combustion vehicles</strong> prior to our strategic pivot toward electric vehicle research[cite: 3].</li>
+            <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023.</li>
+            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, emphasizing our focus on efficient and responsible project management.</li>
+            <li>A decade-long legacy of manufacturing <strong>eight combustion vehicles</strong> before our strategic pivot toward high-performance electric vehicle research.</li>
         </ul>
 
-        <p>We believe Coca-Cola’s CSR mission for community and educational empowerment aligns perfectly with our objective of nurturing India’s technical talent[cite: 3]. We would welcome an opportunity to discuss how your support can accelerate our sustainable engineering projects.</p>
+        <p>Support from Coca-Cola would directly strengthen our mission to provide high-quality engineering education and promote sustainable research in India. We would be grateful to discuss how this collaboration aligns with your vision for community and educational empowerment.</p>
 """
 
 HTML_TAIL="""
-        <p><strong>For detailed information, please refer to:</strong></p>
+        <p><strong>For further details, please refer to:</strong></p>
         <div class="links-section">
             <a href="{brochure_link}">Our Sponsorship Brochure</a>
             <a href="http://www.teamkart.org/">Official Team Website</a>
@@ -138,9 +138,9 @@ def send_emails():
             html_template = HTML_HEAD + HTML_BODY + HTML_TAIL
             
             html_content = html_template.format(
+                your_name = YOUR_NAME,
                 brochure_link = BROCHURE_URL,
                 tk_logo_url = TK_LOGO_URL,
-                your_name = YOUR_NAME,
                 your_year = YOUR_YEAR,
                 your_department = YOUR_DEPARTMENT,
                 your_role = YOUR_ROLE_TK,
