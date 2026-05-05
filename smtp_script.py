@@ -15,8 +15,11 @@ PASSWORD = os.environ.get("EMAIL_PASSWORD")
 # Put in the correct csv file name 
 data = pd.read_csv("test_csv.csv")
 
-# Add your cc emails here
-CC_EMAILS = ["samarthkalgaonkar.teamkartkgp@gmail.com"] 
+# Add your cc emails here - Now includes Mohamed
+CC_EMAILS = [
+    "samarthkalgaonkar.teamkartkgp@gmail.com",
+    "mohamed.teamkartkgp@gmail.com"
+] 
 
 # Definitions
 BROCHURE_URL = "https://online.fliphtml5.com/TeamKart/1-Qt2Y/" 
@@ -47,31 +50,31 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# NEW Integrated Formal Body
+# Cleaned Formal Body (Removed internal [cite] tags)
 HTML_BODY = """
 <body>
     <div class="content">
         <p>Dear Mr. Ayapilla,</p>
         
-        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the premier Formula Student team at <strong>IIT Kharagpur</strong>. I am reaching out to you because your leadership in sustainability and Corporate Social Responsibility at <strong>{company}</strong> aligns perfectly with our mission: transforming high-level engineering theory into tangible, sustainable innovation[cite: 3].</p>
+        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the premier Formula Student team at <strong>IIT Kharagpur</strong>. I am reaching out to you because your leadership in sustainability and Corporate Social Responsibility at <strong>{company}</strong> aligns perfectly with our mission: transforming high-level engineering theory into tangible, sustainable innovation.</p>
 
         <h3>Bridging the Gap: Education and Research</h3>
-        <p>TeamKART is a specialized research cell under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>[cite: 3]. Our project provides a unique ecosystem where students:</p>
+        <p>TeamKART is a specialized research cell under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>. Our project provides a unique ecosystem where students:</p>
         <ul>
-            <li><strong>Execute End-to-End Product Development:</strong> From CAD modeling in SolidWorks to advanced FEA structural validation in ANSYS[cite: 3, 4].</li>
-            <li><strong>Pioneer Green Technology:</strong> We have successfully transitioned from combustion to electric powertrains, manufacturing our <strong>first electric vehicle (KE-1)</strong> to promote zero-emission engineering[cite: 3].</li>
-            <li><strong>Enhance Employability:</strong> Members graduate with hands-on experience in thermal management and powertrain optimization—skills critical to India’s evolving industrial landscape[cite: 3].</li>
+            <li><strong>Execute End-to-End Product Development:</strong> From CAD modeling in SolidWorks to advanced FEA structural validation in ANSYS.</li>
+            <li><strong>Pioneer Green Technology:</strong> We have successfully transitioned from combustion to electric powertrains, manufacturing our <strong>first electric vehicle (KE-1)</strong> to promote zero-emission engineering.</li>
+            <li><strong>Enhance Employability:</strong> Members graduate with hands-on experience in thermal management and powertrain optimization—skills critical to India’s evolving industrial landscape.</li>
         </ul>
 
         <h3>Proven Excellence & Institutional Legacy</h3>
-        <p>Operating since 2008, TeamKART carries the rigorous academic standard of <strong>IIT Kharagpur</strong>[cite: 3]. Our achievements include:</p>
+        <p>Operating since 2008, TeamKART carries the rigorous academic standard of <strong>IIT Kharagpur</strong>. Our achievements include:</p>
         <ul>
-            <li><strong>Formula Bharat 2023:</strong> Secured a prestigious <strong>Top 10 overall finish</strong>[cite: 3].</li>
-            <li><strong>Engineering Accolades:</strong> Awarded <strong>3rd Place in the Cost & Manufacturing Event</strong>[cite: 3].</li>
-            <li><strong>Legacy of Innovation:</strong> Manufactured <strong>eight combustion vehicles</strong> before pivoting to high-performance electric vehicle research[cite: 3].</li>
+            <li><strong>Formula Bharat 2023:</strong> Secured a prestigious <strong>Top 10 overall finish</strong>.</li>
+            <li><strong>Engineering Accolades:</strong> Awarded <strong>3rd Place in the Cost & Manufacturing Event</strong>.</li>
+            <li><strong>Legacy of Innovation:</strong> Manufactured <strong>eight combustion vehicles</strong> before pivoting to high-performance electric vehicle research.</li>
         </ul>
 
-        <p>Support from <strong>{company}</strong> would directly contribute to strengthening hands-on engineering education and sustainability research in India[cite: 3]. We would be grateful for the opportunity to explore the scope of a CSR collaboration at your convenience.</p>
+        <p>Support from <strong>{company}</strong> would directly contribute to strengthening hands-on engineering education and sustainability research in India. We would be grateful for the opportunity to explore the scope of a CSR collaboration at your convenience.</p>
 """
 
 HTML_TAIL="""
@@ -134,7 +137,6 @@ def send_emails():
 
             html_template = HTML_HEAD + HTML_BODY + HTML_TAIL
             
-            # Formatting the template with CSV data and definitions
             html_content = html_template.format(
                 company=row['Company'],
                 brochure_link = BROCHURE_URL,
@@ -149,12 +151,12 @@ def send_emails():
             )
 
             msg.attach(MIMEText(html_content, "html"))
+            # Ensure CC'd recipients are actually included in the send command
             recipients = [row["Email"]] + CC_EMAILS
             server.sendmail(EMAIL, recipients, msg.as_string())
             ist_now = datetime.now() + timedelta(hours=5, minutes=30)
-            print(f"Sent email to {row['Email']} ({row['Company']}) at {ist_now.strftime('%H:%M:%S')} IST")
+            print(f"Sent email to {row['Email']} ({row['Company']}) with CC at {ist_now.strftime('%H:%M:%S')} IST")
             
-            # Anti-spam delay
             time.sleep(random.randint(25, 55))
 
         except Exception as e:
