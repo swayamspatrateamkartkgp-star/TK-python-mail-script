@@ -12,10 +12,10 @@ from email.utils import formataddr, make_msgid
 EMAIL = "swayamspatra.teamkartkgp@gmail.com"
 PASSWORD = os.environ.get("EMAIL_PASSWORD")
 
-# Put in the correct csv file name 
+# Correct csv file name 
 data = pd.read_csv("test_csv.csv")
 
-# Add your cc emails here - Now includes Mohamed
+# CC List updated with Mohamed
 CC_EMAILS = [
     "samarthkalgaonkar.teamkartkgp@gmail.com",
     "mohamed.teamkartkgp@gmail.com"
@@ -32,8 +32,8 @@ YOUR_CONTACT = "+91 9827790420"
 YOUR_LINKED_IN = "https://www.linkedin.com/in/swayam-swarup-patra-95b47539b/"
 YOUR_FACEBOOK = "https://www.facebook.com/TeamKART/"
 
-# Formal Subject Line
-SUBJECT = "Collaborative Opportunity: Empowering Technical Education & Sustainable Engineering at IIT Kharagpur"
+# Subject Line
+SUBJECT = "Proposal for CSR Collaboration: Supporting Technical Excellence at IIT Kharagpur"
 
 HTML_HEAD = """
 <!DOCTYPE html>
@@ -50,40 +50,40 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# Cleaned Formal Body (Removed internal [cite] tags)
+# Updated body for Mr. Ashish Jain
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Mr. Ayapilla,</p>
+        <p>Dear Mr. Jain,</p>
         
-        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the premier Formula Student team at <strong>IIT Kharagpur</strong>. I am reaching out to you because your leadership in sustainability and Corporate Social Responsibility at <strong>{company}</strong> aligns perfectly with our mission: transforming high-level engineering theory into tangible, sustainable innovation.</p>
+        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you as a Senior Director at Coca-Cola to explore a potential CSR collaboration focused on advancing technical education and sustainable engineering research in India[cite: 3].</p>
 
-        <h3>Bridging the Gap: Education and Research</h3>
-        <p>TeamKART is a specialized research cell under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>. Our project provides a unique ecosystem where students:</p>
+        <h3>Empowering Research and Education</h3>
+        <p>Operating under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong> since 2008, TeamKART serves as a specialized research hub[cite: 3]. Our initiative empowers students to:</p>
         <ul>
-            <li><strong>Execute End-to-End Product Development:</strong> From CAD modeling in SolidWorks to advanced FEA structural validation in ANSYS.</li>
-            <li><strong>Pioneer Green Technology:</strong> We have successfully transitioned from combustion to electric powertrains, manufacturing our <strong>first electric vehicle (KE-1)</strong> to promote zero-emission engineering.</li>
-            <li><strong>Enhance Employability:</strong> Members graduate with hands-on experience in thermal management and powertrain optimization—skills critical to India’s evolving industrial landscape.</li>
+            <li><strong>Master Product Development:</strong> We manage full design cycles using industry-standard tools like SolidWorks and ANSYS for structural validation[cite: 3].</li>
+            <li><strong>Lead Green Innovation:</strong> We have successfully manufactured our <strong>first electric vehicle (KE-1)</strong>, demonstrating our commitment to zero-emission technology[cite: 3].</li>
+            <li><strong>Drive Technical Skill-Building:</strong> Members gain hands-on expertise in battery management, powertrain optimization, and advanced manufacturing[cite: 3].</li>
         </ul>
 
-        <h3>Proven Excellence & Institutional Legacy</h3>
-        <p>Operating since 2008, TeamKART carries the rigorous academic standard of <strong>IIT Kharagpur</strong>. Our achievements include:</p>
+        <h3>Legacy of Excellence</h3>
+        <p>TeamKART’s performance is a testament to the academic rigors of <strong>IIT Kharagpur</strong>[cite: 3]. Recent achievements include:</p>
         <ul>
-            <li><strong>Formula Bharat 2023:</strong> Secured a prestigious <strong>Top 10 overall finish</strong>.</li>
-            <li><strong>Engineering Accolades:</strong> Awarded <strong>3rd Place in the Cost & Manufacturing Event</strong>.</li>
-            <li><strong>Legacy of Innovation:</strong> Manufactured <strong>eight combustion vehicles</strong> before pivoting to high-performance electric vehicle research.</li>
+            <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023[cite: 3].</li>
+            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event[cite: 3].</li>
+            <li>Successful manufacturing of <strong>eight combustion vehicles</strong> prior to our strategic pivot toward electric vehicle research[cite: 3].</li>
         </ul>
 
-        <p>Support from <strong>{company}</strong> would directly contribute to strengthening hands-on engineering education and sustainability research in India. We would be grateful for the opportunity to explore the scope of a CSR collaboration at your convenience.</p>
+        <p>We believe Coca-Cola’s CSR mission for community and educational empowerment aligns perfectly with our objective of nurturing India’s technical talent[cite: 3]. We would welcome an opportunity to discuss how your support can accelerate our sustainable engineering projects.</p>
 """
 
 HTML_TAIL="""
-        <p><strong>Kindly refer to:</strong></p>
+        <p><strong>For detailed information, please refer to:</strong></p>
         <div class="links-section">
             <a href="{brochure_link}">Our Sponsorship Brochure</a>
-            <a href="http://www.teamkart.org/">Our Team's Website</a>
-            <a href="https://youtube.com/@teamkart3652">15 Years of TeamKART's Engineering Legacy</a>
-            <a href="https://www.instagram.com/team.kart/">Our Instagram Handle</a>
+            <a href="http://www.teamkart.org/">Official Team Website</a>
+            <a href="https://youtube.com/@teamkart3652">15 Years of Engineering Legacy</a>
+            <a href="https://www.instagram.com/team.kart/">Instagram Handle</a>
         </div>
 
         <div class="footer">
@@ -138,7 +138,6 @@ def send_emails():
             html_template = HTML_HEAD + HTML_BODY + HTML_TAIL
             
             html_content = html_template.format(
-                company=row['Company'],
                 brochure_link = BROCHURE_URL,
                 tk_logo_url = TK_LOGO_URL,
                 your_name = YOUR_NAME,
@@ -151,11 +150,10 @@ def send_emails():
             )
 
             msg.attach(MIMEText(html_content, "html"))
-            # Ensure CC'd recipients are actually included in the send command
             recipients = [row["Email"]] + CC_EMAILS
             server.sendmail(EMAIL, recipients, msg.as_string())
             ist_now = datetime.now() + timedelta(hours=5, minutes=30)
-            print(f"Sent email to {row['Email']} ({row['Company']}) with CC at {ist_now.strftime('%H:%M:%S')} IST")
+            print(f"Sent email to {row['Email']} at {ist_now.strftime('%H:%M:%S')} IST")
             
             time.sleep(random.randint(25, 55))
 
