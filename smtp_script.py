@@ -50,31 +50,31 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# Updated body for Maddy M. at HCLTech (ESG & Advocacy focus)
+# Updated body for Mr. Prashant Preman at The Federal Bank Ltd
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Maddy,</p>
+        <p>Dear Mr. Preman,</p>
         
-        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you as an advocate for Sustainability and ESG at HCLTech to explore a partnership that bridges technical innovation with the core pillars of social and environmental responsibility.</p>
+        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you as the President & ED at The Federal Bank Ltd to explore a CSR collaboration where rigorous engineering research meets strategic community investment—a mission that aligns with Federal Bank's commitment to excellence and national development.</p>
 
-        <h3>Fostering ESG Excellence through Engineering</h3>
-        <p>Operating under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, TeamKART functions as a student-led research cell dedicated to advancing the future of sustainable mobility and engineering education. Our mission aligns with your advocacy goals through:</p>
+        <h3>Fostering Technical Human Capital and Innovation</h3>
+        <p>Operating as a student-led research cell within the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, TeamKART is dedicated to nurturing India's technical talent through complex project execution. Our initiative supports Federal Bank’s vision for educational and social empowerment through:</p>
         <ul>
-            <li><strong>Environmental Leadership:</strong> Our successful transition to electric vehicle technology, marked by our <strong>first EV (KE-1)</strong>, serves as a platform for zero-emission powertrain research.</li>
-            <li><strong>Social Sustainability & Education:</strong> We provide students from diverse backgrounds with hands-on exposure to advanced simulation and validation tools like ANSYS, fostering technical equity and high-level employability.</li>
-            <li><strong>Ethical Project Governance:</strong> Our team emphasizes responsible resource management and cost-efficiency, ensuring technical complexity is balanced with commercial and ethical viability.</li>
+            <li><strong>Developing Future Leaders:</strong> Our members master the full lifecycle of product development, from high-fidelity structural validation in ANSYS to precision manufacturing, fostering a generation of highly employable engineers.</li>
+            <li><strong>Pioneering Sustainable Technology:</strong> We have successfully navigated the transition to green mobility by manufacturing our <strong>first electric vehicle (KE-1)</strong>, promoting clean-energy research in the Indian automotive landscape.</li>
+            <li><strong>Operational Excellence:</strong> TeamKART emphasizes disciplined project management and cost-efficiency, ensuring technical innovation is achieved through responsible resource allocation.</li>
         </ul>
 
-        <h3>Legacy of Technical Innovation</h3>
-        <p>Rooted in the academic excellence of <strong>IIT Kharagpur</strong>, our team has a proven track record of performance:</p>
+        <h3>Institutional Legacy & Proven Track Record</h3>
+        <p>Carrying the academic prestige of <strong>IIT Kharagpur</strong>, our team has established a decade-long history of performance:</p>
         <ul>
             <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023.</li>
-            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, validating our expertise in responsible manufacturing.</li>
-            <li>A legacy of <strong>eight combustion vehicles</strong> built since 2008, providing the foundation for our current strategic pivot to electric vehicle innovation.</li>
+            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, validating our expertise in fiscally responsible engineering.</li>
+            <li>Successful manufacturing of <strong>eight combustion vehicles</strong> prior to our current strategic pivot to electric vehicle innovation.</li>
         </ul>
 
-        <p>A CSR partnership with HCLTech would directly support the development of sustainable technical talent in India. We would welcome the opportunity to discuss how our team's research can support HCLTech’s vision for a sustainable and socially responsible future.</p>
+        <p>A CSR partnership with Federal Bank would directly contribute to the technical human capital and sustainable engineering research at IIT Kharagpur. We would welcome an opportunity to discuss how our team's mission can align with your institution's commitment to social and educational growth.</p>
 """
 
 HTML_TAIL="""
