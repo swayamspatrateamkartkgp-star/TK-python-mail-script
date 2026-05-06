@@ -32,7 +32,7 @@ YOUR_CONTACT = "+91 9827790420"
 YOUR_LINKED_IN = "https://www.linkedin.com/in/swayam-swarup-patra-95b47539b/"
 YOUR_FACEBOOK = "https://www.facebook.com/TeamKART/"
 
-# Subject Line as requested
+# Subject Line
 SUBJECT = "Greetings from Indian Institute of Technology Kharagpur."
 
 HTML_HEAD = """
@@ -50,35 +50,35 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# Updated body for Ms. Monica Gupta at HCL Technologies
+# Updated body for Maddy M. at HCLTech (ESG & Advocacy focus)
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Ms. Gupta,</p>
+        <p>Dear Maddy,</p>
         
-        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you at HCL Technologies Limited to explore a collaborative opportunity where technical innovation meets professional skill-building—a core value reflected in HCL's commitment to tech-driven transformation.</p>
+        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you as an advocate for Sustainability and ESG at HCLTech to explore a partnership that bridges technical innovation with the core pillars of social and environmental responsibility.</p>
 
-        <h3>Empowering Innovation Through Research</h3>
-        <p>Operating under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, TeamKART is a specialized research cell where the next generation of engineers executes end-to-end product development. Our initiative aligns with HCL’s focus on technical education and research excellence:</p>
+        <h3>Fostering ESG Excellence through Engineering</h3>
+        <p>Operating under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, TeamKART functions as a student-led research cell dedicated to advancing the future of sustainable mobility and engineering education. Our mission aligns with your advocacy goals through:</p>
         <ul>
-            <li><strong>Digital and Physical Engineering:</strong> Students utilize advanced CAD and ANSYS structural validation to bridge the gap between high-level theory and industrial application.</li>
-            <li><strong>Sustainability and Green Tech:</strong> We have pivoted to the electric vehicle sector, successfully manufacturing our <strong>first electric vehicle (KE-1)</strong> to advance the future of sustainable mobility.</li>
-            <li><strong>Skill Transformation:</strong> Our members master real-world project execution, developing specialized expertise in powertrain optimization and battery management.</li>
+            <li><strong>Environmental Leadership:</strong> Our successful transition to electric vehicle technology, marked by our <strong>first EV (KE-1)</strong>, serves as a platform for zero-emission powertrain research.</li>
+            <li><strong>Social Sustainability & Education:</strong> We provide students from diverse backgrounds with hands-on exposure to advanced simulation and validation tools like ANSYS, fostering technical equity and high-level employability.</li>
+            <li><strong>Ethical Project Governance:</strong> Our team emphasizes responsible resource management and cost-efficiency, ensuring technical complexity is balanced with commercial and ethical viability.</li>
         </ul>
 
-        <h3>Legacy of Technical Excellence</h3>
-        <p>The academic rigor of <strong>IIT Kharagpur</strong> has fueled a decade-long legacy of performance. Our milestones include:</p>
+        <h3>Legacy of Technical Innovation</h3>
+        <p>Rooted in the academic excellence of <strong>IIT Kharagpur</strong>, our team has a proven track record of performance:</p>
         <ul>
             <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023.</li>
-            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, showcasing our ability to balance technical complexity with commercial viability.</li>
-            <li>Manufacturing of <strong>eight combustion vehicles</strong> prior to our current focus on high-performance EV research.</li>
+            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, validating our expertise in responsible manufacturing.</li>
+            <li>A legacy of <strong>eight combustion vehicles</strong> built since 2008, providing the foundation for our current strategic pivot to electric vehicle innovation.</li>
         </ul>
 
-        <p>A CSR partnership with HCL Technologies would directly support the advancement of technical education and engineering research in India. We would welcome the chance to discuss how our team’s objectives can align with HCL’s vision for technical empowerment.</p>
+        <p>A CSR partnership with HCLTech would directly support the development of sustainable technical talent in India. We would welcome the opportunity to discuss how our team's research can support HCLTech’s vision for a sustainable and socially responsible future.</p>
 """
 
 HTML_TAIL="""
-        <p><strong>For more information, please refer to:</strong></p>
+        <p><strong>For detailed information, please refer to:</strong></p>
         <div class="links-section">
             <a href="{brochure_link}">Our Sponsorship Brochure</a>
             <a href="http://www.teamkart.org/">Official Team Website</a>
