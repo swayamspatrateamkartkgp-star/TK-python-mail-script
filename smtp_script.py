@@ -50,31 +50,31 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# Updated body for Mr. Virendra Somwanshi at Federal Bank Ltd
+# Updated body for Mr. Mundkur at Federal Bank
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Mr. Somwanshi,</p>
+        <p>Dear Mr. Mundkur,</p>
         
-        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the premier Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you as the Country Head of Wealth Management at Federal Bank to explore a CSR partnership that invests in India’s high-value technical human capital—a mission that aligns with your institution's commitment to growth, excellence, and national development.</p>
+        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the premier Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you as an Independent Director at Federal Bank to explore a CSR collaboration where high-stakes technical research meets the principles of responsible governance and national development.</p>
 
-        <h3>Investing in Technical Excellence and Future Assets</h3>
-        <p>Operating as a specialized research cell under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, TeamKART provides an elite environment for students to master complex engineering and project management. Our initiative supports Federal Bank's vision for social and educational empowerment through:</p>
+        <h3>Technical Rigor and Risk-Managed Innovation</h3>
+        <p>Functioning as a specialized research cell within the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, TeamKART emphasizes disciplined engineering and project oversight. Our initiative aligns with the standards of excellence expected at the board level through:</p>
         <ul>
-            <li><strong>Development of Specialized Talent:</strong> Our members master end-to-end product lifecycles, utilizing advanced validation tools like ANSYS to ensure technical rigor and industrial readiness.</li>
-            <li><strong>High-Impact Sustainable Research:</strong> We have successfully pioneered green technology within our institute by manufacturing our <strong>first electric vehicle (KE-1)</strong>, promoting zero-emission powertrain innovation.</li>
-            <li><strong>Disciplined Resource Management:</strong> TeamKART emphasizes fiscal responsibility and lean manufacturing, ensuring that technical innovation is balanced with high-efficiency resource allocation.</li>
+            <li><strong>Data-Driven Engineering:</strong> We execute full product design cycles, employing advanced ANSYS structural validation and rigorous testing to mitigate technical risk and ensure operational safety.</li>
+            <li><strong>Sustainability and ESG Alignment:</strong> TeamKART has successfully pioneered green mobility research by manufacturing our <strong>first electric vehicle (KE-1)</strong>, promoting clean-energy innovation in the Indian technical ecosystem.</li>
+            <li><strong>Fiscally Responsible Design:</strong> Our team prioritizes lean manufacturing and cost-efficiency, ensuring technical complexity is balanced with prudent resource management.</li>
         </ul>
 
-        <h3>Institutional Legacy & Performance Record</h3>
-        <p>Reflecting the prestigious academic standards of <strong>IIT Kharagpur</strong>, our team has a consistent record of high-performance delivery:</p>
+        <h3>Legacy of Performance and Institutional Integrity</h3>
+        <p>Drawing from the prestigious academic foundation of <strong>IIT Kharagpur</strong>, our team has established a decade-long track record of success:</p>
         <ul>
             <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023.</li>
-            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, validating our expertise in cost-effective engineering and operations.</li>
-            <li>A decade-long legacy of manufacturing <strong>eight combustion vehicles</strong> prior to our strategic shift toward high-performance electric vehicle research.</li>
+            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, validating our competence in fiscally disciplined project execution.</li>
+            <li>Successful manufacturing of <strong>eight combustion vehicles</strong> prior to our current strategic pivot to high-performance electric vehicle research.</li>
         </ul>
 
-        <p>A CSR collaboration with Federal Bank would directly support the advancement of sustainable technical research and the development of the next generation of Indian innovators. I would welcome the opportunity to discuss how our team’s objectives can align with Federal Bank’s vision for technical and educational growth.</p>
+        <p>A CSR partnership with Federal Bank would directly support the technical human capital and sustainable research efforts at IIT Kharagpur. I would welcome an opportunity to discuss how our team's mission can align with Federal Bank's commitment to social and educational growth.</p>
 """
 
 HTML_TAIL="""
