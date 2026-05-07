@@ -50,31 +50,33 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# Fixed HTML_BODY with correct termination
+# Updated body for Chandra Mouli Kallu (Alumni & Data Science focus)
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Mr. Agrawal,</p>
+        <p>Dear Mr. Kallu,</p>
         
-        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the premier Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you as a Project & Program Management lead at Johnson & Johnson to explore a CSR collaboration focused on nurturing technical human capital through high-fidelity engineering project execution—a mission that aligns with your leadership in managing complex technical initiatives.</p>
+        <p>Greetings from your alma mater, <strong>IIT Kharagpur</strong>!</p>
 
-        <h3>Strategic Technical Project Execution</h3>
-        <p>Operating as a student-led research cell within the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, TeamKART emphasizes rigorous project lifecycles and validation. Our initiative supports Johnson & Johnson’s vision for educational and social empowerment through:</p>
+        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>. As a fellow KGPian, I am reaching out to you in your capacity as Lead Data Scientist at Johnson & Johnson to share the progress of our institute's Formula Student team and to explore a potential CSR collaboration focused on technical research and data-driven engineering.</p>
+
+        <h3>Empowering Innovation through Data and Engineering</h3>
+        <p>Operating under the <strong>Department of Mechanical Engineering</strong>, TeamKART has evolved into a specialized research cell where we leverage computational modeling and data-backed validation to build high-performance machinery. Our mission aligns with the technical rigor of your field through:</p>
         <ul>
-            <li><strong>End-to-End Program Management:</strong> Students manage complete design and manufacturing cycles, utilizing advanced industry tools like ANSYS for structural validation to bridge the gap between academic theory and high-level employability.</li>
-            <li><strong>Sustainability and EV Innovation:</strong> We have successfully navigated a strategic pivot toward green mobility, manufacturing our <strong>first electric vehicle (KE-1)</strong> to advance zero-emission technology research.</li>
-            <li><strong>Operational Excellence:</strong> Our team prioritizes fiscally responsible design and efficient resource allocation, awarding us <strong>3rd Place in the Cost & Manufacturing Event</strong>.</li>
+            <li><strong>Data-Driven Validation:</strong> We utilize advanced FEA structural validation in ANSYS and CAD modeling to bridge the gap between theoretical physics and real-world performance.</li>
+            <li><strong>Sustainability Research:</strong> We have successfully transitioned to green mobility, manufacturing our <strong>first electric vehicle (KE-1)</strong>, with a current focus on optimizing battery management systems and powertrain efficiency.</li>
+            <li><strong>Human Capital Development:</strong> Our members graduate with hands-on experience in complex project execution—skills critical to the future of India's technical and data landscape.</li>
         </ul>
 
-        <h3>Legacy of Performance and Institutional Excellence</h3>
-        <p>Drawing from the prestigious academic standards of <strong>IIT Kharagpur</strong>, our team has established a decade-long track record of success:</p>
+        <h3>Institutional Legacy & Achievements</h3>
+        <p>Continuing the legacy of excellence you helped build at KGP, our team recently achieved:</p>
         <ul>
             <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023.</li>
-            <li>A decade-long legacy of building <strong>eight combustion vehicles</strong> prior to our current focus on high-performance EV innovation.</li>
-            <li>Direct oversight and technical mentorship from the <strong>Department of Mechanical Engineering</strong>, ensuring the highest standards of research integrity.</li>
+            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, emphasizing our ability to balance technical complexity with efficient resource management.</li>
+            <li>Successful manufacturing of <strong>eight combustion vehicles</strong> prior to our current strategic focus on EV innovation.</li>
         </ul>
 
-        <p>A CSR partnership with Johnson & Johnson would directly support the development of sustainable technical talent and engineering research in India. I would welcome an opportunity to discuss how our team's mission can align with Johnson & Johnson’s vision for technical and educational growth.</p>
+        <p>A CSR partnership with Johnson & Johnson would directly support sustainable technical research at IIT Kharagpur. We would be honored to discuss how our objectives align with your vision for technical empowerment.</p>
 """
 
 HTML_TAIL = """
@@ -87,7 +89,7 @@ HTML_TAIL = """
         </div>
 
         <div class="footer">
-            <p>Thank you for your time and consideration.</p>
+            <p>Thank you for your time and consideration. Always glad to connect with an alumnus.</p>
             <p>Warm regards,</p>
             <table style="border-collapse: collapse; font-family: Arial, sans-serif;">
                 <tr>
@@ -164,4 +166,3 @@ def send_emails():
 
 if __name__ == "__main__":
     send_emails()
-    
