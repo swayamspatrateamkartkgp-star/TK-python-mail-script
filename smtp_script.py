@@ -50,31 +50,31 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# Updated body for Mr. Lalit Kumar (Tata Power focus)
+# Updated body for Jan Strban (CEAT Ltd Focus)
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Mr. Kumar,</p>
+        <p>Dear Mr. Strban,</p>
         
-        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you at Tata Power DDL to explore a potential CSR collaboration focused on sustainable energy and technical research—areas where Tata Power continues to lead India's transition to a greener future.</p>
+        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you at CEAT Ltd to explore a CSR collaboration focused on technical innovation and sustainable engineering—a mission that aligns with CEAT's legacy of high-performance manufacturing and safety.</p>
 
-        <h3>Pioneering Sustainable Mobility and Energy Research</h3>
-        <p>Operating under the <strong>Department of Mechanical Engineering</strong>, TeamKART has transitioned into a specialized research cell dedicated to high-performance electric vehicle (EV) technology. Our mission aligns with the strategic vision of Tata Power through:</p>
+        <h3>Advancing Vehicle Dynamics and Sustainability</h3>
+        <p>Operating as a specialized research cell within the <strong>Department of Mechanical Engineering</strong>, TeamKART provides a unique platform for students to master complex automotive engineering. Our initiative aligns with CEAT's technical standards through:</p>
         <ul>
-            <li><strong>EV Powertrain & Battery Innovation:</strong> We have successfully manufactured our <strong>first electric vehicle (KE-1)</strong>, with current research focused on optimizing battery thermal management and energy distribution systems.</li>
-            <li><strong>Data-Driven Validation:</strong> We utilize advanced simulation tools like ANSYS for structural validation, ensuring that our technical innovation is backed by rigorous computational modeling.</li>
-            <li><strong>Nurturing Future Technical Leaders:</strong> Our initiative bridges the gap between academic theory and industry application, fostering the technical human capital necessary for India's evolving power and automotive landscape.</li>
+            <li><strong>High-Performance Engineering:</strong> We execute full design and manufacturing cycles, using advanced validation tools like ANSYS to ensure structural integrity and optimized vehicle dynamics.</li>
+            <li><strong>The Shift to Electric Mobility:</strong> We have successfully manufactured our <strong>first electric vehicle (KE-1)</strong>, with current research focused on powertrain efficiency and sustainable zero-emission technology.</li>
+            <li><strong>Hands-on Skill Development:</strong> Our team bridges the gap between academic theory and industry application, fostering the technical human capital necessary for the future of India's automotive and tire sectors.</li>
         </ul>
 
-        <h3>Institutional Legacy & Recent Achievements</h3>
-        <p>Continuing the legacy of excellence associated with <strong>IIT Kharagpur</strong>, our team recently achieved:</p>
+        <h3>Legacy of Excellence & Recent Milestones</h3>
+        <p>Reflecting the prestigious academic standards of <strong>IIT Kharagpur</strong>, our team has a consistent record of achievement:</p>
         <ul>
             <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023.</li>
-            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, validating our expertise in fiscally responsible engineering and resource management.</li>
-            <li>A decade-long legacy of <strong>eight combustion vehicles</strong> prior to our current strategic pivot toward EV and sustainable energy innovation.</li>
+            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, validating our expertise in fiscally responsible engineering.</li>
+            <li>Manufacturing of <strong>eight combustion vehicles</strong> prior to our strategic pivot toward EV innovation.</li>
         </ul>
 
-        <p>A CSR partnership with Tata Power DDL would directly support the technical research and educational efforts at IIT Kharagpur. We would be honored to discuss how our objectives can support Tata Power's vision for technical empowerment and a sustainable future.</p>
+        <p>A CSR partnership with CEAT Ltd would directly support sustainable engineering research and the development of future technical talent at IIT Kharagpur. We would welcome the opportunity to discuss how our mission can align with CEAT's vision for technical empowerment.</p>
 """
 
 HTML_TAIL = """
@@ -133,34 +133,4 @@ def send_emails():
             msg["To"] = row["Email"]
             msg["Cc"] = ", ".join(CC_EMAILS)
             msg["Subject"] = SUBJECT
-            msg["Message-ID"] = make_msgid(domain="gmail.com")
-
-            html_template = HTML_HEAD + HTML_BODY + HTML_TAIL
-            
-            html_content = html_template.format(
-                your_name = YOUR_NAME,
-                brochure_link = BROCHURE_URL,
-                tk_logo_url = TK_LOGO_URL,
-                your_year = YOUR_YEAR,
-                your_department = YOUR_DEPARTMENT,
-                your_role = YOUR_ROLE_TK,
-                your_contact = YOUR_CONTACT,
-                your_linkedin = YOUR_LINKED_IN,
-                your_facebook = YOUR_FACEBOOK
-            )
-
-            msg.attach(MIMEText(html_content, "html"))
-            recipients = [row["Email"]] + CC_EMAILS
-            server.sendmail(EMAIL, recipients, msg.as_string())
-            ist_now = datetime.now() + timedelta(hours=5, minutes=30)
-            print(f"Sent email to {row['Email']} at {ist_now.strftime('%H:%M:%S')} IST")
-            
-            time.sleep(random.randint(25, 55))
-
-        except Exception as e:
-            print(f"Error sending to {row['Email']}: {e}")
-
-    server.quit()
-
-if __name__ == "__main__":
-    send_emails()
+            msg["Message-ID"] =
