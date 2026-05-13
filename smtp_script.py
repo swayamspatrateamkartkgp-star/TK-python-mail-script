@@ -50,16 +50,16 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# Updated body for Ashita Khurana at Tata Power DDL
+# Updated body for Mr. Lalit Kumar (Tata Power focus)
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Ms. Khurana,</p>
+        <p>Dear Mr. Kumar,</p>
         
-        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you at Tata Power DDL to explore a CSR collaboration focused on sustainable energy and technical research—areas where Tata Power continues to lead India's transition to a greener future.</p>
+        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you at Tata Power DDL to explore a potential CSR collaboration focused on sustainable energy and technical research—areas where Tata Power continues to lead India's transition to a greener future.</p>
 
         <h3>Pioneering Sustainable Mobility and Energy Research</h3>
-        <p>Operating under the <strong>Department of Mechanical Engineering at IIT Kharagpur</strong>, TeamKART has transitioned into a specialized research cell dedicated to high-performance electric vehicle (EV) technology. Our mission aligns with the strategic vision of Tata Power through:</p>
+        <p>Operating under the <strong>Department of Mechanical Engineering</strong>, TeamKART has transitioned into a specialized research cell dedicated to high-performance electric vehicle (EV) technology. Our mission aligns with the strategic vision of Tata Power through:</p>
         <ul>
             <li><strong>EV Powertrain & Battery Innovation:</strong> We have successfully manufactured our <strong>first electric vehicle (KE-1)</strong>, with current research focused on optimizing battery thermal management and energy distribution systems.</li>
             <li><strong>Data-Driven Validation:</strong> We utilize advanced simulation tools like ANSYS for structural validation, ensuring that our technical innovation is backed by rigorous computational modeling.</li>
@@ -67,14 +67,14 @@ HTML_BODY = """
         </ul>
 
         <h3>Institutional Legacy & Recent Achievements</h3>
-        <p>Carrying the academic prestige of <strong>IIT Kharagpur</strong>, our team has established a decade-long track record of success:</p>
+        <p>Continuing the legacy of excellence associated with <strong>IIT Kharagpur</strong>, our team recently achieved:</p>
         <ul>
             <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023.</li>
             <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, validating our expertise in fiscally responsible engineering and resource management.</li>
             <li>A decade-long legacy of <strong>eight combustion vehicles</strong> prior to our current strategic pivot toward EV and sustainable energy innovation.</li>
         </ul>
 
-        <p>A CSR partnership with Tata Power DDL would directly support technical research and educational efforts at IIT Kharagpur. We would be honored to discuss how our objectives can support Tata Power's vision for technical empowerment and a sustainable future.</p>
+        <p>A CSR partnership with Tata Power DDL would directly support the technical research and educational efforts at IIT Kharagpur. We would be honored to discuss how our objectives can support Tata Power's vision for technical empowerment and a sustainable future.</p>
 """
 
 HTML_TAIL = """
