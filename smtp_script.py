@@ -50,7 +50,7 @@ HTML_HEAD = """
     </style>
 </head>"""
 
-# Updated body for Jan Strban (CEAT Ltd Focus)
+# Fixed HTML_BODY with explicit closing quotes
 HTML_BODY = """
 <body>
     <div class="content">
@@ -63,4 +63,106 @@ HTML_BODY = """
         <ul>
             <li><strong>High-Performance Engineering:</strong> We execute full design and manufacturing cycles, using advanced validation tools like ANSYS to ensure structural integrity and optimized vehicle dynamics.</li>
             <li><strong>The Shift to Electric Mobility:</strong> We have successfully manufactured our <strong>first electric vehicle (KE-1)</strong>, with current research focused on powertrain efficiency and sustainable zero-emission technology.</li>
-            <li><strong>Hands-on Skill Development:</strong> Our team bridges the gap between academic theory and industry application, fostering the
+            <li><strong>Hands-on Skill Development:</strong> Our team bridges the gap between academic theory and industry application, fostering the technical human capital necessary for the future of India's automotive and tire sectors.</li>
+        </ul>
+
+        <h3>Legacy of Excellence & Recent Milestones</h3>
+        <p>Reflecting the prestigious academic standards of <strong>IIT Kharagpur</strong>, our team has a consistent record of achievement:</p>
+        <ul>
+            <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023.</li>
+            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, validating our expertise in fiscally responsible engineering.</li>
+            <li>Manufacturing of <strong>eight combustion vehicles</strong> prior to our strategic pivot toward EV innovation.</li>
+        </ul>
+
+        <p>A CSR partnership with CEAT Ltd would directly support sustainable engineering research and the development of future technical talent at IIT Kharagpur. We would welcome the opportunity to discuss how our mission can align with CEAT's vision for technical empowerment.</p>
+    </div>
+</body>
+"""
+
+HTML_TAIL = """
+        <p><strong>For detailed information, please refer to:</strong></p>
+        <div class="links-section">
+            <a href="{brochure_link}">Our Sponsorship Brochure</a>
+            <a href="http://www.teamkart.org/">Official Team Website</a>
+            <a href="https://youtube.com/@teamkart3652">15 Years of Engineering Legacy</a>
+            <a href="https://www.instagram.com/team.kart/">Instagram Handle</a>
+        </div>
+
+        <div class="footer">
+            <p>Thank you for your time and consideration.</p>
+            <p>Warm regards,</p>
+            <table style="border-collapse: collapse; font-family: Arial, sans-serif;">
+                <tr>
+                    <td style="padding-right: 15px;">
+                        <img src="{tk_logo_url}" width="100" style="display: block;">
+                    </td>
+                    <td style="border-left: 2px solid #E31E24; padding: 0;"></td>
+                    <td style="padding-left: 15px; line-height: 1.4; font-size: 10pt;">
+                        <span style="font-weight: bold; font-size: 11pt;">{your_name}</span><br>
+                        {your_year}-Year Undergraduate Student<br>
+                        {your_department}<br>
+                        {your_role}, TeamKART<br>
+                        IIT Kharagpur<br>
+                        Contact: {your_contact}<br>
+                        <a href="{your_linkedin}" style="color: #0044cc;">LinkedIn</a> | 
+                        <a href="{your_facebook}" style="color: #0044cc;">Facebook</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+"""
+
+def send_emails():
+    now = datetime.now()
+    today_date = now.strftime("%d-%m-%Y")
+    
+    try:
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login(EMAIL, PASSWORD)
+        print(f"Successfully logged in. Sending emails for {today_date}...")
+    except Exception as e:
+        print(f"Login failed: {e}")
+        return
+
+    for index, row in data.iterrows():
+        try:
+            msg = MIMEMultipart("alternative")
+            msg["From"] = formataddr((YOUR_NAME, EMAIL))
+            msg["To"] = row["Email"]
+            msg["Cc"] = ", ".join(CC_EMAILS)
+            msg["Subject"] = SUBJECT
+            msg["Message-ID"] = make_msgid(domain="gmail.com")
+
+            html_template = HTML_HEAD + HTML_BODY + HTML_TAIL
+            
+            html_content = html_template.format(
+                your_name = YOUR_NAME,
+                brochure_link = BROCHURE_URL,
+                tk_logo_url = TK_LOGO_URL,
+                your_year = YOUR_YEAR,
+                your_department = YOUR_DEPARTMENT,
+                your_role = YOUR_ROLE_TK,
+                your_contact = YOUR_CONTACT,
+                your_linkedin = YOUR_LINKED_IN,
+                your_facebook = YOUR_FACEBOOK
+            )
+
+            msg.attach(MIMEText(html_content, "html"))
+            recipients = [row["Email"]] + CC_EMAILS
+            server.sendmail(EMAIL, recipients, msg.as_string())
+            ist_now = datetime.now() + timedelta(hours=5, minutes=30)
+            print(f"Sent email to {row['Email']} at {ist_now.strftime('%H:%M:%S')} IST")
+            
+            time.sleep(random.randint(25, 55))
+
+        except Exception as e:
+            print(f"Error sending to {row['Email']}: {e}")
+
+    server.quit()
+
+if __name__ == "__main__":
+    send_emails()
