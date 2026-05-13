@@ -160,4 +160,9 @@ def send_emails():
             time.sleep(random.randint(25, 55))
 
         except Exception as e:
-            print(f"Error sending to {row['Email
+            print(f"Error sending to {row['Email']}: {e}")
+
+    server.quit()
+
+if __name__ == "__main__":
+    send_emails()
