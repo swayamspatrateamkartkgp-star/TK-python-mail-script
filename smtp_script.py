@@ -54,30 +54,19 @@ HTML_HEAD = """
 HTML_BODY = """
 <body>
     <div class="content">
-        <p>Dear Mr. Strban,</p>
-        
-        <p>My name is <strong>{your_name}</strong>, representing <span class="highlight">TeamKART</span>, the official Formula Student team of <strong>IIT Kharagpur</strong>. I am reaching out to you at CEAT Ltd to explore a CSR collaboration focused on technical innovation and sustainable engineering—a mission that aligns with CEAT's legacy of high-performance manufacturing and safety.</p>
+        <p>Dear Sir/Madam,</p>
 
-        <h3>Advancing Vehicle Dynamics and Sustainability</h3>
-        <p>Operating as a specialized research cell within the <strong>Department of Mechanical Engineering</strong>, TeamKART provides a unique platform for students to master complex automotive engineering. Our initiative aligns with CEAT's technical standards through:</p>
-        <ul>
-            <li><strong>High-Performance Engineering:</strong> We execute full design and manufacturing cycles, using advanced validation tools like ANSYS to ensure structural integrity and optimized vehicle dynamics.</li>
-            <li><strong>The Shift to Electric Mobility:</strong> We have successfully manufactured our <strong>first electric vehicle (KE-1)</strong>, with current research focused on powertrain efficiency and sustainable zero-emission technology.</li>
-            <li><strong>Hands-on Skill Development:</strong> Our team bridges the gap between academic theory and industry application, fostering the technical human capital necessary for the future of India's automotive and tire sectors.</li>
-        </ul>
+        <p>My name is <strong>{your_name}</strong>, and I am a student at <strong>IIT Kharagpur</strong> and a member of our institute’s Formula Student team, <span class="highlight">TeamKART</span>. We are a long-standing student engineering initiative under the Department of Mechanical Engineering (active since 2008), focused on providing hands-on technical education through the complete design and manufacture of Formula-style race cars.</p>
 
-        <h3>Legacy of Excellence & Recent Milestones</h3>
-        <p>Reflecting the prestigious academic standards of <strong>IIT Kharagpur</strong>, our team has a consistent record of achievement:</p>
-        <ul>
-            <li><strong>Top 10 Overall Finish</strong> at Formula Bharat 2023.</li>
-            <li><strong>3rd Place</strong> in the Cost & Manufacturing Event, validating our expertise in fiscally responsible engineering.</li>
-            <li>Manufacturing of <strong>eight combustion vehicles</strong> prior to our strategic pivot toward EV innovation.</li>
-        </ul>
+        <p>Over the years, the team has manufactured eight combustion vehicles and participated in eight competitions globally, earning recognition for excellence—including a Top 10 finish at Formula Bharat 2023 and 3rd place in the Cost & Manufacturing Event. Building on this foundation, TeamKART has recently manufactured its first electric vehicle project series (KE-1 and subsequent models) and is currently working on optimizing our powertrain and battery systems.</p>
 
-        <p>A CSR partnership with CEAT Ltd would directly support sustainable engineering research and the development of future technical talent at IIT Kharagpur. We would welcome the opportunity to discuss how our mission can align with CEAT's vision for technical empowerment.</p>
-    </div>
-</body>
+        <p>Our primary objective is practical skill development. Students gain real-world exposure to engineering design and project execution—skills that strongly align with CSR goals related to technical education and employability. All technical learnings are documented to ensure long-term impact for future student batches.</p>
+
+        <p>As we undertake this technically intensive project, we are seeking CSR support from organizations whose initiatives focus on education and sustainability. Support from <strong>{company}</strong> would directly contribute to strengthening hands-on engineering education in India.</p>
+
+        <p>We would be grateful for the opportunity to share additional details and explore the potential scope of a CSR collaboration at your convenience.</p>
 """
+
 
 HTML_TAIL = """
         <p><strong>For detailed information, please refer to:</strong></p>
