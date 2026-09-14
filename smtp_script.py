@@ -17,8 +17,10 @@ data = pd.read_csv("test_csv.csv")
 
 # CC List updated with Mohamed and Samarth
 CC_EMAILS = [
-    "samarthkalgaonkar.teamkartkgp@gmail.com",
-    "mohamed.teamkartkgp@gmail.com"
+    "prajitpradeep.teamkartkgp@gmail.com",
+    "mohamed.teamkartkgp@gmail.com",
+    "shubhayubasak.teamkartkgp@gmail.com",
+    "nihalsingh.teamkartkgp@gmail.com"
 ] 
 
 # Definitions
